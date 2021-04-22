@@ -42,6 +42,7 @@ h3 {
   margin:100px auto;
   width:100%;
   text-align:center;
+  background-color: rgb(243, 6, 6);
 }
 .action a {
   display:inline-block;
