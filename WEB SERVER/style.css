@@ -12,56 +12,71 @@
 }
 
 .logo{
-    width: 20%;
-    height: 20%;
+    width: 30%;
+    height: 30%;
     margin: -20px;
+    margin-bottom: 30;
 }
 
 img{
-    width: 100%;
+    width: 50%;
+    height: 50%;
 }
-h1{
-    font-size: 30px;
-    font-weight: 500;
+h3 {
+    background: rgb(37, 37, 37);
+    color: #9c27b0;
+    font-size: 36px;
+    line-height: 100px;
+    margin: 10px;
+    margin-left: 150px;
+    margin-right: 150;
+    padding: 2%;
+    position: relative;
     text-align: center;
-    position:relative;
-    margin-bottom: 60px;
+    height: 400px;
+    width: 250px;
+    border-radius: 5px;
 }
-h1:after{
-    content: '';
-    position: absolute;
-    width: 100px;
-    height: 4px;
-    background-color: #FF8159;
-    bottom: -20px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+.action{
+  display:block;
+  margin:100px auto;
+  width:100%;
+  text-align:center;
 }
-.logo-slider .item{
-    background-color: #fff;
-    box-shadow: 0 4px 5px #cacaca;
-    border-radius: 8px;
-    padding: 15px;
-    border: 2px solid #111;
+.action a {
+  display:inline-block;
+  padding:5px 10px; 
+  background:#f30;
+  color:#fff;
+  text-decoration:none;
 }
-.logo-slider .slick-slide{
-    margin:15px;
-    
+.action a:hover{
+  background:rgb(37, 37, 37);
 }
-.slick-dots li.slick-active button:before{
-    color:#ff5722;
+.buttons {
+    border-radius: 25px;
+    padding: 0;
+    margin-bottom: 10px;
 }
-.sliick-dots li button:before{
-    font-size: 12px;
+.buttons .button {
+    border-radius: 25px;
+    background: rgb(37, 37, 37);
+    color: #9c27b0;
+    margin: 5px;
+    width:200px;
+    float:left;
+    margin-top: 30px;
+    margin-left: 800px;
 }
-.slick-next:before,
-.slick-prev:before{
-    color: #ff8159;
-    font-size: 24px;
-}
-.item:hover{
+.button {
+    border-radius: 25px;
+    background: #3498db;
+    color: #fff;
     display: block;
-    transition: all ease 0.3s;
-    transform: scale(1.1) translateY(-5px);
+    font-size: 16px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    width: 48%;
 }
