@@ -1,5 +1,5 @@
 $('.slider-info').slick({
-  infinite: false,
+  infinite: true,
   speed: 200,
   slidesToShow: 3,
   slidesToScroll: 1

@@ -20,10 +20,38 @@
                 
               </div>
               <div class="buttons">
-                <a href="javascript:void(0)" class="button js-add-slide">Add Slide</a>
+                <a href="javascript:void(0)" class="button js-add-slide" onclick="openForm()">Add Device</a>
                 
+                <div class="form-popup" id="myForm">
+                    <form action="/action_page.php" class="form-container">
+                      <h1>Add Device</h1>
+                  
+                      <label for="email"><b>Add Device Name</b></label>
+                      <input type="text" placeholder="Device name" name="email" required>
+                  
+                      <label for="psw"><b>Add Device ID</b></label>
+                      <input type="password" placeholder="Device ID" name="psw" required>
+                  
+                      <button type="submit" class="btn">Add</button>
+                      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                    </form>
+                  </div>
+                  
+                  <script>
+                  function openForm() {
+                    document.getElementById("myForm").style.display = "block";
+                  }
+                  
+                  function closeForm() {
+                    document.getElementById("myForm").style.display = "none";
+                  }
+                  </script>
               </div>
-              
+
+  
+
+</body>
+</html>
               
             </div>
         </div>
