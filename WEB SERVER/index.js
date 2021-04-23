@@ -14,12 +14,15 @@ $('.slider-info').slick({
   slidesToScroll: 1
 });
 var slideIndex = 1;
-var deviceName = document.getElementById(deviceName);
+var deviceName;
 
 $('.js-add-slide').on('click', function() {
+  event.preventDefault();
   slideIndex++;
-  $('.slider-info').slick('slickAdd','<div><h3>' + slideIndex + '</h3></div>');
-  openForm();
+  deviceName = document.getElementById("deviceName").value;
+  $('.slider-info').slick('slickAdd','<div><h3>' + deviceName + '</h3></div>');
+  closeForm();
+  document.getElementById("deviceName").value=null;
 });
 
 $('.js-remove-slide').on('click', function() {

@@ -11,16 +11,15 @@
           <img src="images/logo.png">
         </div>
       <div class="slider slider-info">
-        <div><h3>1</h3></div>
       </div>
 
-      <a href="javascript:void(0)" class="button js-add-slide" onclick="openForm()">Add Device</a>
+      <a href="javascript:void(0)" class="button" onclick="openForm()">Add Device</a>
       <div class="form-popup" id="myForm">
         <form class="form-container">
           <h1>Add Device</h1>
           <label for="email"><b>Add Device Name</b></label>
-          <input type="text" placeholder="Device name" name="email" required>
-          <button type="submit">Add</button>
+          <input type="text" placeholder="Device name" id="deviceName" name="name" required>
+          <button type="submit" class="js-add-slide">Add</button>
           <button type="button" class="cancel js-remove-slide" onclick="closeForm()">Close</button>
         </form>
       </div>
