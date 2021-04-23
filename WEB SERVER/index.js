@@ -10,3 +10,10 @@ $('.js-add-slide').on('click', function() {
   $('.slider-info').slick('slickAdd','<div><h3>' + slideIndex + '</h3></div>');
 });
 
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}

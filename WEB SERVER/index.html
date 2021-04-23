@@ -5,66 +5,29 @@
         <link rel = "stylesheet" href = "style.css">
         <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
         <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-       
     </head>
     <body>
-        <div class = "main">
-            <nav>   
-                <div class = "logo">
-                    <img src="images/logo.png">
-                </div>
-            </nav>
-            <div class="slider slider-info">
-                
-                <div><h3>1</h3></div>
-                
-              </div>
-              <div class="buttons">
-                <a href="javascript:void(0)" class="button js-add-slide" onclick="openForm()">Add Device</a>
-                
-                <div class="form-popup" id="myForm">
-                    <form action="/action_page.php" class="form-container">
-                      <h1>Add Device</h1>
-                  
-                      <label for="email"><b>Add Device Name</b></label>
-                      <input type="text" placeholder="Device name" name="email" required>
-                  
-                      <label for="psw"><b>Add Device ID</b></label>
-                      <input type="password" placeholder="Device ID" name="psw" required>
-                  
-                      <button type="submit" class="btn">Add</button>
-                      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-                    </form>
-                  </div>
-                  
-                  <script>
-                  function openForm() {
-                    document.getElementById("myForm").style.display = "block";
-                  }
-                  
-                  function closeForm() {
-                    document.getElementById("myForm").style.display = "none";
-                  }
-                  </script>
-              </div>
-
-  
-
-</body>
-</html>
-              
-            </div>
+        <div class = "logo">
+          <img src="images/logo.png">
         </div>
-        
+      <div class="slider slider-info">
+        <div><h3>1</h3></div>
+      </div>
 
-        
-         
-          <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-          <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-          <script type="text/javascript" src="slick/slick.min.js"></script>
-          <script src = "index.js"></script>
-          
-        
-
+      <a href="javascript:void(0)" class="button js-add-slide" onclick="openForm()">Add Device</a>
+      <div class="form-popup" id="myForm">
+        <form class="form-container">
+          <h1>Add Device</h1>
+          <label for="email"><b>Add Device Name</b></label>
+          <input type="text" placeholder="Device name" name="email" required>
+          <button type="submit">Add</button>
+          <button type="button" class="cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+      
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+      <script type="text/javascript" src="slick/slick.min.js"></script>
+      <script src = "index.js"></script>
     </body>
 </html>
