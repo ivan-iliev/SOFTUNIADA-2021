@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> SafeHome </title>
-        <link rel = "stylesheet" href = "style.css">
-        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+      <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+      <title> SafeHome </title>
+      <link rel = "stylesheet" href = "style.css">
+      <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+      <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     </head>
     <body>
-        <div class = "logo">
-          <img src="images/logo.png">
-        </div>
-      <div class="slider slider-info">
+      <div class = "logo">
+        <img src="images/logo.png">
       </div>
+      <div class="slider slider-info"></div>
 
       <a href="javascript:void(0)" class="button" onclick="openForm()">Add Device</a>
       <div class="form-popup" id="myForm">
@@ -23,10 +23,16 @@
           <button type="button" class="cancel js-remove-slide" onclick="closeForm()">Close</button>
         </form>
       </div>
-      
+
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
       <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
       <script type="text/javascript" src="slick/slick.min.js"></script>
-      <script src = "index.js"></script>
+      <script type="text/javascript" src = "index.js"></script>
+      <script type="text/javascript" src = "form.js"></script>
     </body>
 </html>

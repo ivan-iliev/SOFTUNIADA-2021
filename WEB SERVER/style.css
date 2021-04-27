@@ -20,10 +20,9 @@ body{
   margin-bottom: 30;
 }
 
-h3 {
+.slider h2 {
     background: rgb(37, 37, 37);
     color: #9c27b0;
-    font-size: 36px;
     line-height: 100px;
     margin-left: 24.6%;
     margin-bottom: 10%;
@@ -64,7 +63,7 @@ h3 {
     color: white;
   }
   
-  .form-container input[type=text], .form-container input[type=password] {
+  .form-container input[type=text]{
     width: 80%;
     padding: 15px;
     margin: 5px 0 22px 0;
@@ -72,10 +71,9 @@ h3 {
     background: #f1f1f1;
   }
   
-  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  .form-container input[type=text]:focus{
     background-color: #ddd;
     outline: none;
-    color: rgb(255, 255, 255);
   }
   
   .form-container button {
