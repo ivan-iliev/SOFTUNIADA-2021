@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    height: 110vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient( 90turn ,#9c27b0, #8ecdff);
+}
+
+.logo img{
+  padding:none;
+  width: 6%;
+  height: 6%;
+  margin-left: 2%;
+  margin-top: 2%;
+  margin-bottom: 30;
+}
+
+.slider h2 {
+    background: rgb(37, 37, 37);
+    color: #9c27b0;
+    line-height: 100px;
+    margin-left: 24.6%;
+    margin-bottom: 10%;
+    margin-top: 5%;
+    position: relative;
+    text-align: center;
+    height: 400px;
+    width: 260px;
+    border-radius: 5px;
+}
+
+.button {
+  border-radius: 25px;
+  background: rgb(37, 37, 37);
+  color: #9c27b0;
+  width:200px;
+  display: block;
+  font-size: 16px;
+  margin: 15px auto;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+  .form-popup {
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    border: 3px solid #363636;
+    background-color: rgba(0, 0 , 0, 0.5);
+  }
+  
+  .form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: rgb(37, 37, 37);
+    color: white;
+  }
+  
+  .form-container input[type=text]{
+    width: 80%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  .form-container input[type=text]:focus{
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  .form-container button {
+    background-color: #6ebcfc;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  .form-container .cancel {
+    background-color:  #9c27b0;
+  }
+  
+  .form-container button:hover {
+    opacity: 1;
+  }
