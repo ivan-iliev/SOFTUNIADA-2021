@@ -20,7 +20,9 @@ var stateDevice;
 function updateData(){
     database.ref('devices/' + deviceName).on('value',(snapshot)=>{
         stateDevice=snapshot.val().state;
+        deviceName = snapshot.val().name;
         app.state=Boolean(stateDevice);
+        app.name=String(deviceName);
         console.log(Boolean(stateDevice));
     });
 }
@@ -31,7 +33,8 @@ $('.js-add-slide').on('click', function() {
   if(deviceName!=""){
     slideIndex++;
     if(devices.length<5){
-        database.ref('devices/' + deviceName).set({
+        database.ref('devices/'+deviceName).set({
+            name:deviceName,
             state: false
         });
         console.log(Boolean(stateDevice));
@@ -46,11 +49,12 @@ $('.js-add-slide').on('click', function() {
 var app = new Vue({
     el: '#app',
     data: {
-        name: String(deviceName),
-        state: false
+      index:1,
+      name: String(devices[this.index]),
+      state: false
     }
 })
 
 setInterval(function(){
     updateData();
-}, 1000)
+}, 10000)
