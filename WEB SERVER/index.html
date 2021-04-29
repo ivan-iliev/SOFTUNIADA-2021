@@ -11,7 +11,10 @@
       <div class = "logo">
         <img src="images/logo.png">
       </div>
-      <div class="slider slider-info"></div>
+      <div id="app">
+        <p>{{name}}</p>
+        <p>{{state}}</p>
+      </div>
 
       <a href="javascript:void(0)" class="button" onclick="openForm()">Add Device</a>
       <div class="form-popup" id="myForm">
@@ -30,8 +33,9 @@
       <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
       <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
       <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
-      <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-      <script type="text/javascript" src="slick/slick.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vue-carousel@0.18.0/dist/vue-carousel.min.js"></script>
       <script type="text/javascript" src = "index.js"></script>
       <script type="text/javascript" src = "form.js"></script>
     </body>

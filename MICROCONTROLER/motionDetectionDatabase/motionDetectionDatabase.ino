@@ -3,8 +3,10 @@
 #include <WiFiUdp.h>
 #include <FirebaseESP8266.h>
 
-#define WIFI_SSID "VIVANETBG.COM"                                          
-#define WIFI_PASSWORD "aresfrend13"
+//#define WIFI_SSID "VIVANETBG.COM"                                          
+//#define WIFI_PASSWORD "aresfrend13"
+#define WIFI_SSID "Svetlina_adm"                                          
+#define WIFI_PASSWORD "3FGzw7Ea"
 #define FIREBASE_HOST "softuniada.firebaseio.com"
 #define FIREBASE_AUTH "KzfawSV3h0yYPtRYy76h8E1plrD4pVaI0ida6wXr"
 FirebaseData firebaseData;
@@ -51,8 +53,8 @@ void setup() {
 //      Serial.println();
 //    }
 }
-
-String pathForDevice="/device";
+int numTimeStamps=0;
+String pathForDevice="/devices/device1";
 String timeStamp;
 String formattedTime;
 void loop() {
@@ -76,7 +78,13 @@ void loop() {
       Serial.println("UPDATED");
       if (Firebase.pushString(firebaseData, pathForDevice+"/timeStamps", timeStamp))
       {
-        Serial.println("TIME STAMP:  "+timeStamp);
+        if(numTimeStamps<11){
+          Serial.println("TIME STAMP:  "+timeStamp);
+          numTimeStamps++;
+//        }else{
+//          
+//        }
+        }
       }
     }else {
       Serial.println(firebaseData.errorReason());

@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "firebase": "^8.4.2"
+    "firebase": "^8.4.2",
+    "vue-carousel": "^0.18.0"
   }
 }

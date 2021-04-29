@@ -11,15 +11,19 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 var database=firebase.database();
 
-$('.slider-info').slick({
-  infinite: true,
-  speed: 200,
-  slidesToShow: 3,
-  slidesToScroll: 1
-});
+Vue.use(VueCarousel);
+
 var slideIndex = 1;
 var deviceName;
 var devices=[];
+var stateDevice;
+function updateData(){
+    database.ref('devices/' + deviceName).on('value',(snapshot)=>{
+        stateDevice=snapshot.val().state;
+        app.state=Boolean(stateDevice);
+        console.log(Boolean(stateDevice));
+    });
+}
 
 $('.js-add-slide').on('click', function() {
   event.preventDefault();
@@ -27,21 +31,26 @@ $('.js-add-slide').on('click', function() {
   if(deviceName!=""){
     slideIndex++;
     if(devices.length<5){
-      database.ref('devices/' + deviceName).set({
-        state: false
-      });
-      devices.push(deviceName);
-      $('.slider-info').slick('slickAdd','<div><h2>' + deviceName + '</h2></div>');
-      closeForm();
+        database.ref('devices/' + deviceName).set({
+            state: false
+        });
+        console.log(Boolean(stateDevice));
+        devices.push(deviceName);
+        closeForm();
     }else{
       alert("You can not add a new device right now!");
     }
   }
 });
 
-$('.js-remove-slide').on('click', function() {
-  $('.slider-info').slick('slickRemove',slideIndex - 1);
-  if (slideIndex !== 0){
-    slideIndex--;
-  }
-});
+var app = new Vue({
+    el: '#app',
+    data: {
+        name: String(deviceName),
+        state: false
+    }
+})
+
+setInterval(function(){
+    updateData();
+}, 1000)
