@@ -16,7 +16,7 @@ $('.slider-info').slick({
   infinite: true,
   speed: 200,
   slidesToShow: 3,
-  slidesToScroll: 1
+  arrows: false,
 });
 var slideIndex = 1;
 var deviceName;
