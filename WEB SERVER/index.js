@@ -14,31 +14,58 @@ var database=firebase.database();
 Vue.use(VueCarousel);
 
 var slideIndex = 1;
-var deviceName;
 var devices=[];
+var deviceStates=[];
 var stateDevice;
 function updateData(){
-    database.ref('devices/' + deviceName).on('value',(snapshot)=>{
-        stateDevice=snapshot.val().state;
-        deviceName = snapshot.val().name;
-        app.state=Boolean(stateDevice);
-        app.name=String(deviceName);
-        console.log(Boolean(stateDevice));
-    });
+    for(var i=0; i<devices.length; i++){
+        database.ref('devices/' + devices[i]).on('value',(snapshot)=>{
+        devices[snapshot.val().id]=snapshot.val().name;
+        deviceStates[snapshot.val().id]=snapshot.val().state;
+        app.datalist[snapshot.val().id]=
+        {
+          index: new Int16Array(snapshot.val().id),
+          name: new String(devices[snapshot.val().id]),
+          state: new Boolean(devices[snapshot.val().id]),
+        }
+        console.log(Boolean(deviceStates[snapshot.val().id]));
+      });
+    }
 }
 
+var deviceName;
 $('.js-add-slide').on('click', function() {
   event.preventDefault();
   deviceName = document.getElementById("deviceName").value;
+  devices.push(deviceName);
+  deviceStates.push(false);
   if(deviceName!=""){
-    slideIndex++;
-    if(devices.length<5){
+    if(devices.length<10){
         database.ref('devices/'+deviceName).set({
+            id:devices.length,
             name:deviceName,
             state: false
         });
+        app.datalist.push(
+          {
+            index: new Int16Array(devices.length),
+            name: new String(deviceName),
+            state: new Boolean(false),
+            style:{
+              'display': 'inline-block',
+              'background': 'rgb(37, 37, 37)',
+              'color': "#9c27b0",
+              'height': "400px",
+              'width': '23.5%',
+              'line-height': "80px",
+              'margin-bottom': "2%",
+              'margin-left': "40px",
+              'position':"relative",
+              'text-align': "center",
+              'border-radius': "5px"
+            }
+          })
         console.log(Boolean(stateDevice));
-        devices.push(deviceName);
         closeForm();
     }else{
       alert("You can not add a new device right now!");
@@ -48,12 +75,16 @@ $('.js-add-slide').on('click', function() {
 
 var app = new Vue({
     el: '#app',
-    data: {
-      index:1,
-      name: String(devices[this.index]),
-      state: false
+    data:{
+      datalist:[],
+      options: {
+        currentPage: 0,
+        infinite: 4,
+        slidesToScroll: 4,
+        loop: true
+      }
     }
-})
+});
 
 setInterval(function(){
     updateData();
