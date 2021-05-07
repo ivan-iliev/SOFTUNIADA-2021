@@ -4,12 +4,16 @@
       <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
       <title> SafeHome </title>
       <link rel = "stylesheet" href = "style.css">
+      <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+      <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     </head>
     <body>
       <div class = "logo">
         <img src="images/logo.png">
       </div>
       <div id="app">
+        <p>{{name}}</p>
+        <p>{{state}}</p>
       </div>
 
       <a href="javascript:void(0)" class="button" onclick="openForm()">Add Device</a>
@@ -32,7 +36,6 @@
       <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
       <script src="https://cdn.jsdelivr.net/npm/vue-carousel@0.18.0/dist/vue-carousel.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/vue-concise-slider@3.4.4/dist/module.min.js"></script>
       <script type="text/javascript" src = "index.js"></script>
       <script type="text/javascript" src = "form.js"></script>
     </body>
