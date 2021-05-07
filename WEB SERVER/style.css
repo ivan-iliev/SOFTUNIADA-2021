@@ -20,15 +20,17 @@ body{
   margin-bottom: 30;
 }
 
-.slider {
+.slider  {
   display: block;
   background: rgb(37, 37, 37);
   color: #9c27b0;
   height: 400px;
+  width: 20%;
+  margin-block-end: 200px;
   line-height: 80px;
-  margin-bottom: 10%;
+  margin-bottom: 2%;
   margin-left: 40px;
-  position: relative;
+  position:relative;
   text-align: center;
   border-radius: 5px;
 }

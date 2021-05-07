@@ -11,5 +11,8 @@
   "dependencies": {
     "firebase": "^8.4.2",
     "vue-carousel": "^0.18.0"
+  },
+  "devDependencies": {
+    "vue-concise-slider": "^3.4.4"
   }
 }
