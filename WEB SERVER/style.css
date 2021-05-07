@@ -20,19 +20,33 @@ body{
   margin-bottom: 30;
 }
 
-.slider  {
-  display: block;
+h3 {
   background: rgb(37, 37, 37);
   color: #9c27b0;
-  height: 400px;
-  width: 20%;
-  margin-block-end: 200px;
-  line-height: 80px;
-  margin-bottom: 2%;
-  margin-left: 40px;
-  position:relative;
+  line-height: 100px;
+  margin-left: 24.6%;
+  margin-bottom: 10%;
+  margin-top: 5%;
+  position: relative;
   text-align: center;
+  height: 400px;
+  width: 260px;
   border-radius: 5px;
+  display: inline-block;
+}
+
+.action{
+  display:block;
+  margin:100px auto;
+  width:100%;
+  text-align:center;
+}
+.action a {
+  display:inline-block;
+  padding:5px 10px; 
+  background:#f30;
+  color:#fff;
+  text-decoration:none;
 }
 
 .button {

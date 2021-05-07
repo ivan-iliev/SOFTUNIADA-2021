@@ -12,8 +12,14 @@ firebase.initializeApp(firebaseConfig);
 var database=firebase.database();
 
 Vue.use(VueCarousel);
-
+$('.slider-info').slick({
+  infinite: true,
+  speed: 200,
+  slidesToShow: 3,
+  slidesToScroll: 1
+});
 var slideIndex = 1;
+var deviceName;
 var devices=[];
 var deviceStates=[];
 var stateDevice;
@@ -66,6 +72,7 @@ $('.js-add-slide').on('click', function() {
             }
           })
         console.log(Boolean(stateDevice));
+        $('.slider-info').slick('slickAdd','<div><h3>' + deviceName + '</h3></div>');
         closeForm();
     }else{
       alert("You can not add a new device right now!");
