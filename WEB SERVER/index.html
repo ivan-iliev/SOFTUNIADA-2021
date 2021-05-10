@@ -9,11 +9,9 @@
       <div class = "logo">
         <img src="images/logo.png">
       </div>
-      <div id="app">
+      <div id="app" v-if="renderComponent" v-for="device in datalist">
+        <div class="slider">{{device.name}}</br>{{device.state}}</div>
       </div>
-      <div class="slider slider-info">        
-      </div>
-
 
       <a href="javascript:void(0)" class="button" onclick="openForm()">Add Device</a>
       <div class="form-popup" id="myForm">
@@ -39,7 +37,7 @@
       <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
       <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
       <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-      <script type="text/javascript" src="slick/slick.min.js"></script>
+      <script type="text/javascript" src="slick-1.8.1/slick/slick.min.js"></script>
       <script type="text/javascript" src = "index.js"></script>
       <script type="text/javascript" src = "form.js"></script>
     </body>
