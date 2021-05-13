@@ -27,18 +27,6 @@ var deviceStates=[];
 var stateDevice;
 var numberDevices;
 
-// function getDatabseData(){
-//   database.ref('devices').on('value',(snapshot)=>{
-//     numberDevices=snapshot.val().lenght.lenght;
-//   });
-//   for(var i=1; i<=numberDevices; i++){
-//     database.ref('devices/'+new String(i)).on('value',(snapshot)=>{
-//       devices.push(snapshot.val().name);
-//       deviceStates[i-1]=snapshot.val().state;
-//     });
-//   }
-// }
-
 function updateData(){
     for(var i=0; i<devices.length; i++){
       database.ref('devices/' + devices[i]).on('value',(snapshot)=>{
@@ -72,19 +60,6 @@ $('.js-add-slide').on('click', function() {
             index: devices.length,
             name: deviceName,
             state: false
-            // style:{
-            //   'display': 'inline-block',
-            //   'background': 'rgb(37, 37, 37)',
-            //   'color': "#9c27b0",
-            //   'height': "400px",
-            //   'width': '23.5%',
-            //   'line-height': "80px",
-            //   'margin-bottom': "2%",
-            //   'margin-left': "40px",
-            //   'position':"relative",
-            //   'text-align': "center",
-            //   'border-radius': "5px"
-            // }
           })
         console.log(Boolean(stateDevice));
         // $('.slider-info').slick('slickAdd','<li><h3>'+app.datalist[devices.length-1].name+'</br>'+ app.datalist[devices.length-1].state+'</h3></li>');
@@ -117,4 +92,4 @@ var app = new Vue({
 setInterval(function(){
     updateData();
     app.forceRerender();
-}, 100)
+}, 1000)
